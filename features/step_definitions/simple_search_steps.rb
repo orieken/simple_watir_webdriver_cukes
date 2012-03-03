@@ -12,6 +12,7 @@ end
 
 When /^I search for "([^"]*)"$/ do |thing_i_want_to_search_for|
   @browser.text_field(:id => "sb_form_q").set thing_i_want_to_search_for
+  @browser.button(:id => "sb_form_go").click
 end
 
 When /^I follow the "([^"]*)" link$/ do |arg1|

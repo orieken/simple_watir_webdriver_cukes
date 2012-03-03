@@ -15,8 +15,8 @@ When /^I search for "([^"]*)"$/ do |thing_i_want_to_search_for|
   @browser.button(:id => "sb_form_go").click
 end
 
-When /^I follow the "([^"]*)" link$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+When /^I follow the "([^"]*)" link$/ do |the_link_i_want_to_click|
+  @browser.link(:text => the_link_i_want_to_click).click
 end
 
 Then /^I should see the title "([^"]*)"$/ do |arg1|

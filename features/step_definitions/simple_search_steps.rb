@@ -11,7 +11,7 @@ Given /^I am on the Bing Home Page$/ do
 end
 
 When /^I search for "([^"]*)"$/ do |thing_i_want_to_search_for|
-  pending # express the regexp above with the code you wish you had
+  @browser.text_field(:id => "sb_form_q").set thing_i_want_to_search_for
 end
 
 When /^I follow the "([^"]*)" link$/ do |arg1|
